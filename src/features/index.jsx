@@ -1,4 +1,4 @@
-import navbarReducer from "./navbar/navbarSlice";
+import navbarReducer from "./Navbar/navbarSlice";
 
 export {
     navbarReducer,
