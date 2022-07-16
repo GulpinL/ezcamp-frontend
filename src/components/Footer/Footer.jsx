@@ -1,18 +1,21 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import {useViewport} from "../../customhooks"
 
 import { FaFacebookMessenger, FaGithub, FaReddit, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 import "./Footer.sass"
 
 const Footer = () => {
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 1024
   return (
     <footer className = "footer">
       <div className="footer-title">
         Your satisfaction is our happiness
       </div>
       <div className="footer-info">
-        <div className="footer-left">
+        <div className={!isMobile ? "footer-left" : "footer-left w-100"}>
           <ul className="staff-list">
             <li className="staff">
               <p className="staff-id">18127264</p>
@@ -36,7 +39,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="footer-right">
+        <div className={!isMobile ? "footer-right" : "footer-right w-100"}>
           <ul className="contact-list">
             <li className="contact">
               <Link to = "/" className="contact-link">
