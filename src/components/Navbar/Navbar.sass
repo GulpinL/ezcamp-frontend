@@ -1,0 +1,83 @@
+#navbar
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 999
+    background: var(--first-theme-color)
+    padding: 5px 100px
+
+.navbar-container
+    width: 100%
+    display: flex
+    align-items: center
+
+.navbar-brand
+    width: var(--col-two)
+    padding: 10px
+    outline: none
+    margin-left: 20px
+    img
+        width: 50px
+        margin: auto
+
+.navbar-search
+    width: var(--col-six)
+
+.search-box
+    width: calc( 100% - 120px )
+    height: 40px
+    padding: 0 20px
+    outline: none
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+    border: none
+
+.search-btn
+    width: 120px
+    background: var(--second-theme-color)
+    height: 40px
+    color: var(--white-color)
+    padding: 0 15px
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+
+.search-icon
+    font-size: 14px
+    margin-right: 10px
+
+.navbar-account
+    width: var(--col-two)
+    display: flex
+    justify-content: end
+
+.login-btn
+    height: 40px
+    width: 120px
+    border: 2px solid var(--second-theme-color)
+    transition: .5s ease all
+
+.login-btn:hover
+    border: 2px solid var(--second-theme-color)
+    border-radius: 10px
+
+.navbar-cart
+    width: var(--col-two)
+    display: flex
+    justify-content: center
+
+.cart
+    position: relative
+.cart-icon
+    font-size: 30px
+.cart-amount
+    position: absolute
+    color: var(--white-color)
+    background: var(--second-theme-color)
+    width: 20px
+    height: 20px
+    text-align: center
+    line-height: 16px
+    border-radius: 50%
+    top: -5px
+    right: -5px
