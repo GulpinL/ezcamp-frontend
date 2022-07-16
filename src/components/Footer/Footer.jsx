@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-copyright">
-        &copy; EC01-10-2022; supported by Mr.Luong Vi Minh
+        &copy; Made by EC01-10-2022; Supported by Mr.Luong Vi Minh
       </div>
     </footer>
   )
