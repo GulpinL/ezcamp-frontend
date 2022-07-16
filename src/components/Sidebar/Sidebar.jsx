@@ -42,18 +42,18 @@ const Sidebar = () => {
         <div className="line"></div>
         {isSidebarOpen ? <div className="sidebar-dropdown">
           <div className="sidebar-search">
-            <input type="text" className="search-box sidebar-box" placeholder='Tent, hand, stove, ...'/>
+            <input type="text" className="search-box sidebar-box" placeholder='Tent, gloves, stove, ...'/>
             <button className='btn search-btn'>
               <BsSearch className='search-icon'/>
               Search
           </button>
           </div>
-          <Link to = "/" className="sidebar-link">
+          {accountName !== "" ? <Link to = "/" className="sidebar-link">
             <div className="sidebar-icon">
               <FaUserAlt/>
             </div>
             <p>{accountName}</p>
-          </Link>
+          </Link> : null}
           <Link to = "/" className='sidebar-link'>
             <div className="sidebar-icon">
               <BsHouseDoorFill/>
@@ -79,7 +79,7 @@ const Sidebar = () => {
             <p>Contact</p>
           </Link>
           <div className="btns-container">
-            {accountName !== "" ? <button className='btn sidebar-login-btn'>
+            {accountName === "" ? <button className='btn sidebar-login-btn'>
               <div className="sidebar-icon">
                 <FiLogIn/>
               </div>

@@ -16,7 +16,7 @@ const Navbar = () => {
           <img src="/img/brand_logo.png" alt="" className="logo-brand" />
         </Link>
         <div className="navbar-search">
-          <input type="text" className="search-box" placeholder='Tent, hand, stove, ...'/>
+          <input type="text" className="search-box" placeholder='Tent, gloves, stove, ...'/>
           <button className='btn search-btn'>
             <BsSearch className='search-icon'/>
             Search
