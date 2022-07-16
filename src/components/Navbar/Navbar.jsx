@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import "./Navbar.sass"
 
 const Navbar = () => {
-  const [accountName, setAccountName] = useState("")
+  const [accountName, setAccountName] = useState("Trần Hà Long")
   const [cartAmount, setCartAmount] = useState(4)
 
   return (
@@ -41,6 +41,31 @@ const Navbar = () => {
             <div className="cart-amount">{cartAmount}</div>
           </div>
         </div>
+      </div>
+      <div className="line"></div>
+      <div className="navbar-container ">
+        <ul className="navbar-list">
+          <li className='navbar-item'>
+            <Link to = "/" className='navbar-link'>
+              Home
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to = "/" className='navbar-link'>
+              Product
+            </Link>
+          </li>
+          <li className='navbar-item'>
+            <Link to ="/" className='navbar-link'>
+              About us
+            </Link>
+          </li>
+          <li className='navbar-item'>
+            <Link to = "/" className='navbar-link'>
+              Contact
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   )

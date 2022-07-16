@@ -5,12 +5,15 @@
     width: 100%
     z-index: 999
     background: var(--first-theme-color)
-    padding: 5px 100px
+    padding: 0px 100px
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12),0 16px 16px rgba(0,0,0,0.12)
 
 .navbar-container
     width: 100%
+    max-width: 1500px
     display: flex
     align-items: center
+    margin: auto
 
 .navbar-brand
     width: var(--col-two)
@@ -50,6 +53,33 @@
     width: var(--col-two)
     display: flex
     justify-content: end
+    cursor: pointer
+    z-index: 9
+
+.account
+    display: flex
+    align-items: center
+
+.account-icon
+    font-size: 36px
+
+.account-info
+    margin-right: -20px
+    margin-left: 10px
+
+    p
+        font-size: 12px
+
+    .name
+        font-size: 14px
+
+.account-name
+    display: flex
+    align-items: center
+
+.account-down-icon
+    margin-top: 5px
+    margin-left: 5px
 
 .login-btn
     height: 40px
@@ -65,6 +95,7 @@
     width: var(--col-two)
     display: flex
     justify-content: center
+    cursor: pointer
 
 .cart
     position: relative
@@ -77,7 +108,37 @@
     width: 20px
     height: 20px
     text-align: center
-    line-height: 16px
+    font-size: 12px
+    line-height: 20px
     border-radius: 50%
     top: -5px
     right: -5px
+
+.navbar-list
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.navbar-item
+    padding: 20px 20px
+    transition: .4s ease all
+    cursor: pointer
+
+.navbar-item:hover
+    background: var(--second-theme-color)
+
+.navbar-item:hover .navbar-link
+    color: var(--third-theme-color)
+.navbar-link
+    width: 100%
+    height: 100%
+    color: var(--second-theme-color)
+    letter-spacing: 1px
+    text-transform: uppercase
+    text-decoration: none
+
+.line
+    width: 100%
+    height: 2px
+    background: var(--third-theme-color)
