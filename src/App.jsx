@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, Login } from "./pages";
 import {Navbar, Footer, Sidebar, Blur} from "./components"
 import { useViewport } from "./customhooks";
 
@@ -13,7 +13,7 @@ function App() {
   const isMobile = viewPort.width <= 1024
 
   const {isSidebarOpen} = useSelector(store => store.navbar)
-  return <BrowserRouter>
+  return  <BrowserRouter>
     {
       isMobile ? <Sidebar/> : <Navbar/>
     }
@@ -22,9 +22,13 @@ function App() {
     }
     <Routes>
       <Route path = "/" element = {<Home/>}/>
+      <Route path = "/login" element = {<Login/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>;
+  
+  
+  
 }
 
 export default App;
