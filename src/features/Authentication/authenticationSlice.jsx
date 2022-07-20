@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+    loginForm: true,
     login: {
         firstInput: "",
         secondInput: "",
@@ -26,11 +27,16 @@ const authenticationSlice = createSlice({
         },
         setCreate: (state, action) => {
             state.create = action.payload
+        },
+        setLoginForm: (state, action) => {
+            state.loginForm = action.payload
         }
     }
 })
 
 export const {
     setLogin,
-    setCreate } = authenticationSlice.actions
+    setCreate,
+    setLoginForm
+} = authenticationSlice.actions
 export default authenticationSlice.reducer;
