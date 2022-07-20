@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
 import { BsSearch, BsCart3, BsCaretDown } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useViewport } from '../../customhooks';
+import { setLoginForm } from '../../features/Authentication/authenticationSlice';
 
 import "./Navbar.sass"
 
 const Navbar = () => {
+  const viewport = useViewport()
+  console.log(viewport.scroll)
   const { user } = useSelector(store => store.user)
+  const { loginForm } = useSelector(store => store.authentication)
+  const dispatch = useDispatch()
+
   const [cartAmount, setCartAmount] = useState(4)
   return (
     <nav id="navbar">
@@ -33,7 +40,7 @@ const Navbar = () => {
               </div>
             </div>
           </div> :
-            <Link to="/login">
+            <Link to="/login" onClick={() => dispatch(setLoginForm(true))}>
               <button className='btn login-btn'>Login</button>
             </Link>
           }
@@ -46,30 +53,33 @@ const Navbar = () => {
         </div>
       </div>
       <div className="line"></div>
-      <div className="navbar-container ">
-        <ul className="navbar-list">
-          <li className='navbar-item'>
-            <Link to="/" className='navbar-link'>
-              Home
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/" className='navbar-link'>
-              Product
-            </Link>
-          </li>
-          <li className='navbar-item'>
-            <Link to="/" className='navbar-link'>
-              About us
-            </Link>
-          </li>
-          <li className='navbar-item'>
-            <Link to="/" className='navbar-link'>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
+      {
+        viewport.scroll <= 100 && <div className="navbar-container ">
+          <ul className="navbar-list">
+            <li className='navbar-item'>
+              <Link to="/" className='navbar-link'>
+                Home
+              </Link>
+            </li>
+            <li className="navbar-item">
+              <Link to="/" className='navbar-link'>
+                Product
+              </Link>
+            </li>
+            <li className='navbar-item'>
+              <Link to="/" className='navbar-link'>
+                About us
+              </Link>
+            </li>
+            <li className='navbar-item'>
+              <Link to="/" className='navbar-link'>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      }
+
     </nav>
   )
 }
