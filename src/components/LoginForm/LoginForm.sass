@@ -9,6 +9,9 @@
     align-items: center
     flex-direction: column
 
+    p
+        text-align: center
+
 .form-title
     font-size: 30px
     font-weight: bold
@@ -21,7 +24,8 @@
 
 .form-input-container
     width: 100%
-
+    margin-bottom: 20px
+    position: relative
     input
         width: 100%
         padding: 7px 15px
@@ -37,6 +41,7 @@
     display: flex
     justify-content: center
     margin-top: 20px
+    margin-bottom: 20px
 
 .form-btn
     display: flex
@@ -45,6 +50,7 @@
     background: var(--first-theme-color)
     color: var(--second-theme-color)
     border: 2px solid var(--second-theme-color)
+    cursor: pointer
     transition: .4s ease all
 
     svg
@@ -54,3 +60,7 @@
     background: var(--second-theme-color)
     color: var(--white-color)
     border-radius: 10px
+
+.direct-link
+    text-decoration: underline
+    cursor: pointer

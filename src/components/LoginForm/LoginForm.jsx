@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setLogin } from "../../features/Authentication/authenticationSlice"
+import { setLogin, setLoginForm } from "../../features/Authentication/authenticationSlice"
 import { setUser } from '../../features/User/userSlice'
 import { useNavigate } from 'react-router-dom'
 
@@ -53,6 +53,8 @@ const LoginForm = () => {
             <BsArrowRight />
           </button>
         </div>
+        <p>Haven't got an account yet?</p>
+        <p className='direct-link' onClick={() => dispatch(setLoginForm(false))}>Get one now!</p>
       </div> :
         <div className="form-content">
           <div className="form-input-container">
