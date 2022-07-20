@@ -1,0 +1,72 @@
+.product-list-container
+    width: 100%
+    margin: auto
+.product-list
+    width: calc( 100% + 20px )
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-left: -10px
+.product-item
+    padding: 10px
+    display: flex
+    justify-content: center
+    color: var(--second-theme-color)
+    position: relative
+.product
+    padding: 10px
+    border: 2px solid var(--second-theme-color)
+    border-radius: 5px
+    color: var(--second-theme-color)
+    font-weight: bold
+.product-img
+    width: 100%
+    img
+        width: 100%
+        border-radius: 5px
+.product-content
+    margin: 20px 0 10px 0
+.product-content-top
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+.product-name
+    font-size: 14px
+    width: 60%
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 1
+    line-clamp: 1
+    -webkit-box-orient: vertical
+
+// .product-fullname
+//     position: absolute
+//     top: 0
+//     left: 0
+//     background: var(--white-color)
+//     font-size: 10px
+//     color: #000
+//     padding: 5px 10px
+
+.product-rating
+    width: 40%
+    display: flex
+    align-items: flex-start
+    justify-content: flex-end
+.product-content-bottom
+    display: flex
+    justify-content: space-between
+    margin-top: 10px
+.add-cart-btn
+    border: 1px solid var(--second-theme-color)
+    border-radius: 5px
+    padding: 5px
+    color: var(--second-theme-color)
+    transition: .4s ease all
+    svg
+        margin-right: 5px
+.add-cart-btn:hover
+    background: var(--second-theme-color)
+    color: var(--white-color)

@@ -7,7 +7,9 @@ import CreateForm from "./CreateForm/CreateForm";
 import ValidError from "./ValidError/ValidError";
 import ScrollTopButton from "./ScrollTopButton/ScrollTopButton";
 import Advertisement from "./Advertisement/Advertisement";
-import Category from "./Category/Catgory"
+import Category from "./Category/Catgory";
+import ProductList from "./ProductList/ProductList";
+import Star from "./Star/Star";
 
 export {
     Navbar,
@@ -19,5 +21,7 @@ export {
     ValidError,
     ScrollTopButton,
     Advertisement,
-    Category
+    Category,
+    ProductList,
+    Star
 }

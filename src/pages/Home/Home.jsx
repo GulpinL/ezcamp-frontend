@@ -1,5 +1,8 @@
 import React from 'react'
-import { Advertisement, Category } from '../../components'
+import { Advertisement, Category, ProductList } from '../../components'
+import {
+  productList
+} from '../../common/productList/productList'
 
 import "./Home.sass"
 
@@ -8,6 +11,7 @@ const Home = () => {
     <div id="home-page">
       <Advertisement />
       <Category />
+      <ProductList list={productList} />
     </div>
   )
 }
