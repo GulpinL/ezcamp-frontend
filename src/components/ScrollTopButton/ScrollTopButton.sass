@@ -1,0 +1,23 @@
+.scroll-btn
+    position: fixed
+    display: block
+    right: 20px
+    bottom: 20px
+    border: 2px solid var(--second-theme-color)
+    width: 30px
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    animation: slide-down .8s ease
+
+    button
+        svg
+            font-size: 20px
+            margin-top: 5px
+
+@keyframes slide-down
+    0%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(0)
