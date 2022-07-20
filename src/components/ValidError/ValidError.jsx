@@ -1,10 +1,12 @@
 import React from 'react'
 import "./ValidError.sass"
 
-const ValidError = ({field}) => {
+const ValidError = ({ field }) => {
   return (
     <div className='error'>
-        Your {field} is not valid!
+      {
+        field === "Confirm" ? "Confirm password is not correct" : `Your ${field} is not valid!`
+      }
     </div>
   )
 }
