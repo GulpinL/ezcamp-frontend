@@ -10,6 +10,7 @@ import Advertisement from "./Advertisement/Advertisement";
 import Category from "./Category/Catgory";
 import ProductList from "./ProductList/ProductList";
 import Star from "./Star/Star";
+import Filter from "./Filter/Filter";
 
 export {
     Navbar,
@@ -23,5 +24,6 @@ export {
     Advertisement,
     Category,
     ProductList,
-    Star
+    Star,
+    Filter,
 }
