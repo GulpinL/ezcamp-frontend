@@ -10,7 +10,6 @@ import "./Navbar.sass"
 
 const Navbar = () => {
   const viewport = useViewport()
-  console.log(viewport.scroll)
   const { user } = useSelector(store => store.user)
   const { loginForm } = useSelector(store => store.authentication)
   const dispatch = useDispatch()
@@ -62,7 +61,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="navbar-item">
-              <Link to="/" className='navbar-link'>
+              <Link to="/product" className='navbar-link'>
                 Product
               </Link>
             </li>

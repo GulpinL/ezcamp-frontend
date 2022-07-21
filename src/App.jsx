@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Login } from "./pages";
+import { Home, Login, Product } from "./pages";
 import { Navbar, Footer, Sidebar, Blur, ScrollTopButton } from "./components"
 import { useViewport } from "./customhooks";
 
@@ -23,6 +23,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/product" element={<Product />} />
     </Routes>
     <ScrollTopButton />
     <Footer />
