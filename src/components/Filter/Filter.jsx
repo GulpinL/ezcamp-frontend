@@ -7,17 +7,20 @@ import {
 import { BiCaretDown } from "react-icons/bi";
 
 import "./Filter.sass"
+import { useViewport } from '../../customhooks';
 
 const Filter = () => {
+    const viewport = useViewport()
+    const isMobileViewport = viewport.width <= 650
     const [brandDisplayList, setBrandDisplayList] = useState(brandList.slice(0, 4))
     return (
-        <aside className='filter'>
-            <div className="filter-container">
+        <aside className={isMobileViewport ? "filter mobile-filter" : "filter"}>
+            <div className={isMobileViewport ? "filter-container mobile-filter-container" : "filter-container"}>
                 <div className="filter-field">
                     <div className="filter-name">
                         Brands
                     </div>
-                    <div className="filter-content">
+                    <div className={isMobileViewport ? "filter-content mobile-filter-content" : "filter-content"}>
                         {brandDisplayList.map((brand, index) => {
                             return <div key={index} className="checkbox-container">
                                 <input type="checkbox" name="brand" id={brand} />
@@ -57,7 +60,7 @@ const Filter = () => {
                     <div className="filter-name">
                         Style
                     </div>
-                    <div className="filter-content">
+                    <div className={isMobileViewport ? "filter-content mobile-filter-content" : "filter-content"}>
                         {styleList.map((style, index) => {
                             return <div key={index} className="checkbox-container">
                                 <input type="checkbox" name="brand" id={style} />
@@ -68,6 +71,7 @@ const Filter = () => {
                 </div>
             </div>
         </aside>
+
     )
 }
 

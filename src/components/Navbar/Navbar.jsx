@@ -45,10 +45,10 @@ const Navbar = () => {
           }
         </div>
         <div className="navbar-cart">
-          <div className="cart">
+          <Link to="/checkout" className="cart">
             <BsCart3 className='cart-icon' />
             <div className="cart-amount">{cartAmount}</div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="line"></div>

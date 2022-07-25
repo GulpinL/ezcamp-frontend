@@ -11,6 +11,7 @@ import Category from "./Category/Catgory";
 import ProductList from "./ProductList/ProductList";
 import Star from "./Star/Star";
 import Filter from "./Filter/Filter";
+import CartItem from "./CartItem/CartItem";
 
 export {
     Navbar,
@@ -26,4 +27,5 @@ export {
     ProductList,
     Star,
     Filter,
+    CartItem,
 }

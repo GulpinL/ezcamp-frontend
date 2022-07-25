@@ -9,7 +9,7 @@ const Product = () => {
     const viewport = useViewport()
     const isMobileViewport = viewport.width < 1024
     return (
-        <div id="product-page" className={isMobileViewport ? 'pt-100' : ''}>
+        <div id="product-page" className={isMobileViewport ? 'mobile-product-page pt-100' : ''}>
             <Filter />
             <ProductList list={productList} />
         </div>
